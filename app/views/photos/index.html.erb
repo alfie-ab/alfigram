@@ -5,6 +5,9 @@
     <title>Alfigram</title>
   </head>
   <body>
+    <div>
+    <%= image_tag @photos.image.url(:medium) %>
+    </div>
     <a href="/photos/new">Add a photo</a>
   </body>
 </html>

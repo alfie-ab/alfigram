@@ -1,12 +1,12 @@
 <%= form_for :photo, url: photos_path, html: {multipart: true} do |f| %>
 
   <div class="field">
-    <%= f.label :image %>
+    <%= f.label :Image %>
     <%= f.file_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :caption %>
+    <%= f.label :Caption %>
     <%= f.text_area :caption %>
   </div>
 
