@@ -17,5 +17,11 @@ feature 'homepage' do
       visit '/photos'
       expect(page).to have_content('Loving lyf')
     end
+
+    scenario 'adding a comment to a photo' do
+      visit '/photos/1'
+      expect(page).to have_content('Loving lyf')
+    end
   end
+
 end
