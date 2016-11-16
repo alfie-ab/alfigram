@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>New photo</title>
-  </head>
-  <body>
-    <%= form_for @photo, html: { multipart: true } do |f| %>
-      <%= f.file_field :image %>
+<%= form_for :photo, url: photos_path, html: {multipart: true} do |f| %>
 
-    <div class="field">
-      <%= f.label :image %>
-      <%= f.file_field :image %>
-    </div>
-    <% end %>
-  </body>
-</html>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :caption %>
+    <%= f.text_area :caption %>
+  </div>
+
+  <div class="">
+    <%= f.submit %>
+  </div>
+
+<% end %>
