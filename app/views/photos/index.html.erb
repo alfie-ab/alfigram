@@ -6,8 +6,12 @@
   </head>
   <body>
     <div>
-    <%= image_tag @photos.image.url(:medium) %>
+    <% @photos.each do |photo| %>
+      <%= image_tag photo.image.url(:medium) %>
+    <% end %>
+  </div>
+    <div>
+      <a href="/photos/new">Add a photo</a>
     </div>
-    <a href="/photos/new">Add a photo</a>
   </body>
 </html>
