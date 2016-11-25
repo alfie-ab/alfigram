@@ -9,18 +9,16 @@ feature 'homepage' do
   end
 
   context 'photos have been added' do
-    before do
-      Photo.create(caption: "Loving lyf")
-    end
 
     scenario 'display photos' do
-      visit '/photos'
+      post_picture('Loving lyf')
       expect(page).to have_content('Loving lyf')
     end
 
     scenario 'adding a comment to a photo' do
+      post_picture("Hating it")
       visit '/photos/1'
-      expect(page).to have_content('Loving lyf')
+      expect(page).to have_content('Hating it')
     end
   end
 
