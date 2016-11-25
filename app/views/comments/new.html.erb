@@ -1,0 +1,12 @@
+<%= form_for :comment, url: photo_comments_path, html: {multipart: true} do |f| %>
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="">
+    <%= f.submit %>
+  </div>
+
+<% end %>
