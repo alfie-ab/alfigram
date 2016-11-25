@@ -8,7 +8,7 @@
     <div>
     <% @photos.each do |photo| %>
       <%= image_tag photo.image.url(:medium) %>
-      <%= photo.caption %>
+      <a href="/photos/<%= photo.id %>"><%= photo.caption %></a>
     <% end %>
     </div>
     <div>
