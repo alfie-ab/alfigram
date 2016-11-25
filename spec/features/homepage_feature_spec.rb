@@ -15,11 +15,12 @@ feature 'homepage' do
       expect(page).to have_content('Loving lyf')
     end
 
-    scenario 'adding a comment to a photo' do
+    scenario 'adding a caption to a photo' do
       post_picture("Hating it")
       visit '/photos/1'
       expect(page).to have_content('Hating it')
     end
+
   end
 
 end

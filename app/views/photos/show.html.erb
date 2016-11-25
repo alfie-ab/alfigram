@@ -8,5 +8,13 @@
     <%= image_tag @photo.image.url(:large) %>
     <%= @photo.caption %>
     <a href="/photos/<%= @photo.id %>/comments/new">Add comment</a>
+    <div>
+      <h2>Comments</h2>
+      <% i = 0 %>
+        <% @photo.comments.each do |comment| %>
+        <% i += 1 %>
+          <h3> <%= comment.description %></h3>
+        <% end  %>
+    </div>
   </body>
 </html>
