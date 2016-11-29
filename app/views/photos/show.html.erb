@@ -16,5 +16,13 @@
           <h3> <%= comment.description %></h3>
         <% end  %>
     </div>
+    <div class="like-form">
+    <%= form_for :like, url: likes_path, html: {multipart: true} do |f| %>
+      <%= f.submit %>
+    <% end %>
+    </div>
+    <div>
+      <h3>Likes</h3>
+    </div>
   </body>
 </html>
