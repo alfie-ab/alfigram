@@ -1,7 +1,7 @@
 class LikesController < ApplicationController
 
   def create
-    @like = Like.create(like_params)
+    @like = Like.create(params[:photo_id])
     redirect_to photos_path
   end
 
