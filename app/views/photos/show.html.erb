@@ -17,8 +17,9 @@
         <% end  %>
     </div>
     <div class="like-form">
-    <%= form_for :like, url: likes_path, html: {multipart: true} do |f| %>
-      <%= f.submit %>
+    <%= form_tag likes_path, method: 'post' do %>
+      <%= hidden_field_tag(:photo_id, "#{@photo.id}") %>
+      <%= submit_tag "Like!" %>
     <% end %>
     </div>
     <div>
