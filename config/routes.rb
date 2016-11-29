@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  post 'likes' => 'likes#create'
+
   root 'photos#index'
 end

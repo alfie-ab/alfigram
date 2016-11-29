@@ -7,6 +7,6 @@ feature 'liking a photo' do
     click_link('picture')
     click_button('Like!')
     expect(page).to have_content('1 Like')
-  end
+  end 
 
 end
