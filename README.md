@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my version of Instagram, built on Rails. The front-end driver is ERB, the back-end database is PostgreSQL and the testing framework is RSpec
 
-Things you may want to cover:
+Features still to be implemented:
 
-* Ruby version
+* Adjust likes so that a user can only do one like per photo
 
-* System dependencies
+* Style properly using Bootstrap framework
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Update README with deployment instructions
