@@ -9,6 +9,7 @@
     <% @photos.each do |photo| %>
       <%= image_tag photo.image.url(:medium) %>
       <a href="/photos/<%= photo.id %>"><%= photo.caption %></a>
+      <h4><%= photo.likes.count %> Like</h4>
     <% end %>
     </div>
     <div>
