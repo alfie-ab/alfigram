@@ -10,4 +10,12 @@ module FeatureHelpers
     click_button 'Save Photo'
   end
 
+  def user_sign_up(email)
+    visit '/users/sign_up'
+    fill_in 'user[email]', with: email
+    fill_in 'user[password]', with: 'password'
+    fill_in 'user[password_confirmation]', with: 'password'
+    click_button 'Sign up'
+  end
+
 end
